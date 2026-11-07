@@ -10,6 +10,7 @@
 
 local DataStoreService = game:GetService("DataStoreService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local RunService = game:GetService("RunService")
 
 local GameConfig = require(ReplicatedStorage:WaitForChild("Shared"):WaitForChild("GameConfig"))
 local Remotes = require(script.Parent.Remotes)
@@ -67,6 +68,12 @@ function PlayerDataService.Load(player)
 				break
 			end
 			warn(("[PlayerData] Load attempt %d failed for %s: %s"):format(attempt, player.Name, tostring(result)))
+			-- Studio without API access (or an unpublished place): don't keep retrying
+			local msg = tostring(result)
+			if RunService:IsStudio() and (msg:find("403") or msg:find("publish") or msg:find("Studio")) then
+				warn("[PlayerData] Saving is off in Studio. Turn on Game Settings > Security > Enable Studio Access to API Services.")
+				break
+			end
 			task.wait(1.5)
 		end
 	end
@@ -104,6 +111,14 @@ end
 function PlayerDataService.Release(player)
 	PlayerDataService.Save(player)
 	profiles[player] = nil
+end
+
+-- Wipes a player's progress back to a fresh save (used by /resetme)
+function PlayerDataService.ResetData(player)
+	local profile = profiles[player]
+	if profile then
+		profile.Data = defaultData()
+	end
 end
 
 function PlayerDataService.SaveAll()
