@@ -23,6 +23,11 @@ local C = UI.Colors
 local Hud = {}
 
 local refs = {}
+local order = 0
+local function nextOrder()
+	order += 1
+	return order
+end
 
 ---------------------------------------------------------------------------
 -- Notifications
@@ -40,7 +45,7 @@ function Hud.Notify(text, color)
 		TextStrokeTransparency = 0,
 		AutomaticSize = Enum.AutomaticSize.Y,
 		Size = UDim2.new(1, 0, 0, 22),
-		LayoutOrder = os.clock() * 1000,
+		LayoutOrder = nextOrder(),
 	})
 	-- Keep only the newest 5
 	local labels = {}
