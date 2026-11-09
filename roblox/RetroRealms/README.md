@@ -76,8 +76,8 @@ To let a friend use them in live servers, add their UserId to
   Humanoid and a HumanoidRootPart.
 - **Hand-build a dungeon:** put a model named after the dungeon's Id in
   ServerStorage > **DungeonTemplates** with parts named `Start` and
-  `BossSpawn`, an optional `Exit`, and a folder `MonsterSpawns`... named
-  `MobSpawns` containing parts where monsters appear.
+  `BossSpawn`, an optional `Exit`, and a folder named `MobSpawns`
+  containing parts where monsters appear.
 - **Move or rebuild the map:** edit anything in Workspace > Map. Keep the
   Towns, DungeonEntrances, MonsterSpawns and WorldZones folders. If you
   delete WorldZones, a brand-new placeholder map is generated when the game
