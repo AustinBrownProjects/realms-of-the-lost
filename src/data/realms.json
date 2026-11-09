@@ -2,31 +2,37 @@
   "difficulties": [
     {
       "color": "#969696",
+      "maxRatio": 0.6,
       "name": "Trivial",
       "warning": "Barely worth your time."
     },
     {
       "color": "#6ed25a",
+      "maxRatio": 0.9,
       "name": "Easy",
       "warning": "You should have no trouble here."
     },
     {
       "color": "#f5dc50",
+      "maxRatio": 1.15,
       "name": "Fair",
       "warning": "A fair fight. Stay sharp."
     },
     {
       "color": "#ff9632",
+      "maxRatio": 1.6,
       "name": "Hard",
       "warning": "Dangerous. Bring friends or come back stronger."
     },
     {
       "color": "#e63c3c",
+      "maxRatio": 3,
       "name": "Deadly",
       "warning": "Monsters here will crush you in a few hits."
     },
     {
       "color": "#be28a0",
+      "maxRatio": 1000000000,
       "name": "Suicidal",
       "warning": "Far beyond your level. You will almost certainly die instantly."
     }
