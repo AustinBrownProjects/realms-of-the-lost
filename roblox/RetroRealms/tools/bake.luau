@@ -35,6 +35,15 @@ local function makeRandom(seed)
 end
 local RandomShim = { new = function(seed) return makeRandom(seed or os.time()) end }
 
+-- Lune 0.10's CFrame.lookAt returns a mirrored rotation; use a correct one
+local function lookAt(at, target, up)
+	up = up or roblox.Vector3.new(0, 1, 0)
+	local look = (target - at).Unit
+	local right = look:Cross(up).Unit
+	return roblox.CFrame.fromMatrix(at, right, right:Cross(look), -look)
+end
+local CFrameShim = setmetatable({ lookAt = lookAt }, { __index = roblox.CFrame })
+
 local cache = {}
 local function loadModule(moduleScript)
 	if cache[moduleScript] then return cache[moduleScript] end
@@ -46,6 +55,7 @@ local function loadModule(moduleScript)
 		workspace = game:GetService("Workspace"),
 		Instance = Instance,
 		Random = RandomShim,
+		CFrame = CFrameShim,
 		task = { wait = function() end, spawn = task.spawn, delay = task.delay, defer = task.defer },
 		warn = function(...) print("[warn]", ...) ; _G.WARNINGS = (_G.WARNINGS or 0) + 1 end,
 	}, nil)
