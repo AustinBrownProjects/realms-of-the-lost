@@ -61,8 +61,8 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --font-pixel: "Press Start 2P", ui-monospace, monospace;
   --font-body: "VT323", ui-monospace, monospace;
-  --shadow-pixel: var(--shadow-pixel);
-  --shadow-glow: var(--shadow-glow);
+  --shadow-pixel: var(--pixel-shadow);
+  --shadow-glow: var(--glow-shadow);
 }
 
 :root {
@@ -99,8 +99,8 @@
   --sidebar-accent-foreground: oklch(0.93 0.035 85);
   --sidebar-border: oklch(0.4 0.06 292);
   --sidebar-ring: oklch(0.8 0.135 82);
-  --shadow-pixel: 4px 4px 0 0 oklch(0.08 0.02 292);
-  --shadow-glow: 0 0 0 2px oklch(0.8 0.135 82), 6px 6px 0 0 oklch(0.08 0.02 292);
+  --pixel-shadow: 4px 4px 0 0 oklch(0.08 0.02 292);
+  --glow-shadow: 0 0 0 2px oklch(0.8 0.135 82), 6px 6px 0 0 oklch(0.08 0.02 292);
 }
 
 .dark {
@@ -136,8 +136,8 @@
   --sidebar-accent-foreground: oklch(0.93 0.035 85);
   --sidebar-border: oklch(0.4 0.06 292);
   --sidebar-ring: oklch(0.8 0.135 82);
-  --shadow-pixel: 4px 4px 0 0 oklch(0.08 0.02 292);
-  --shadow-glow: 0 0 0 2px oklch(0.8 0.135 82), 6px 6px 0 0 oklch(0.08 0.02 292);
+  --pixel-shadow: 4px 4px 0 0 oklch(0.08 0.02 292);
+  --glow-shadow: 0 0 0 2px oklch(0.8 0.135 82), 6px 6px 0 0 oklch(0.08 0.02 292);
 }
 
 @layer base {
