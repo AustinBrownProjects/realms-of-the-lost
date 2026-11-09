@@ -37,6 +37,8 @@ local GameConfig = {
 		CritChance = 0.1,
 		CritMultiplier = 1.75,
 		MinDamage = 1,
+		-- Scales every monster hit on players. Higher = more dangerous world.
+		MonsterDamageMultiplier = 3.5,
 		-- How much a level gap can scale damage (see Progression.LevelDiffMultiplier)
 		LevelDiffMinMult = 0.02,
 		LevelDiffMaxMult = 20,

@@ -380,7 +380,7 @@ local function hurtPlayer(info, player, multiplier)
 	local playerLevel = LevelService.GetLevel(player)
 	local playerStats = Progression.GetStats(playerLevel)
 	local dmg = Progression.RollDamage(info.Level, info.Stats.Attack, playerLevel, playerStats.Defense, false)
-	dmg = math.floor(dmg * (multiplier or 1))
+	dmg = math.max(1, math.floor(dmg * (multiplier or 1) * GameConfig.Combat.MonsterDamageMultiplier))
 	humanoid:TakeDamage(dmg)
 	Remotes.DamageNumber:FireClient(player, hrp.Position + Vector3.new(0, 3, 0), dmg, false, true)
 end

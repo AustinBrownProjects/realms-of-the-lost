@@ -90,8 +90,8 @@ local DEFAULTS = {
 }
 
 local BOSS_DEFAULTS = {
-	Health = 8,
-	Attack = 1.1,
+	Health = 3,
+	Attack = 0.55,
 	Defense = 1.2,
 	Speed = 15,
 	AttackCooldown = 1.8,
