@@ -101,7 +101,7 @@ local function billboard(parent, position, title, subtitle, color, maxDistance)
 	local t = Instance.new("TextLabel")
 	t.BackgroundTransparency = 1
 	t.Size = UDim2.new(1, 0, 0.6, 0)
-	t.Font = Enum.Font.Arcade
+	t.FontFace = Font.fromEnum(Enum.Font.Arcade)
 	t.TextScaled = true
 	t.Text = title
 	t.TextColor3 = color or Color3.new(1, 1, 1)
@@ -112,7 +112,7 @@ local function billboard(parent, position, title, subtitle, color, maxDistance)
 		local s = t:Clone()
 		s.Size = UDim2.new(1, 0, 0.4, 0)
 		s.Position = UDim2.fromScale(0, 0.6)
-		s.Font = Enum.Font.Code
+		s.FontFace = Font.fromEnum(Enum.Font.Code)
 		s.Text = subtitle
 		s.TextColor3 = Color3.fromRGB(235, 230, 215)
 		s.Parent = gui

@@ -22,7 +22,7 @@ local C = UI.Colors
 
 local Hud = {}
 
-local refs = {}
+local refs: { [string]: any } = {}
 local order = 0
 local function nextOrder()
 	order += 1

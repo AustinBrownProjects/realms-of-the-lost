@@ -18,9 +18,10 @@ local GameConfig = {
 	AutosaveInterval = 120, -- seconds
 
 	-- World -----------------------------------------------------------------
-	-- When true, a placeholder map is generated at server start if the place
-	-- has no "WorldZones" folder in Workspace. Build your own map and set this
-	-- to false (or just keep your own WorldZones folder in Workspace).
+	-- The downloadable place file already has the greybox map saved in
+	-- Workspace, so you can edit it in Studio. If you ever delete the
+	-- "WorldZones" folder, a fresh placeholder map is generated at server
+	-- start while this is true.
 	BuildGreyboxMap = true,
 	TileSize = 1000, -- studs per world tile in the greybox map
 	StartingTown = "Emberbrook Village",
@@ -36,6 +37,8 @@ local GameConfig = {
 		CritChance = 0.1,
 		CritMultiplier = 1.75,
 		MinDamage = 1,
+		-- Scales every monster hit on players. Higher = more dangerous world.
+		MonsterDamageMultiplier = 3.5,
 		-- How much a level gap can scale damage (see Progression.LevelDiffMultiplier)
 		LevelDiffMinMult = 0.02,
 		LevelDiffMaxMult = 20,
