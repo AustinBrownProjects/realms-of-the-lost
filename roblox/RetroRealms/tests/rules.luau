@@ -1,6 +1,6 @@
 --[[
 	Game rule checks for Retro Realms. Run with Lune from roblox/RetroRealms:
-	    lune run tests/rules.spec.luau
+	    lune run tests/rules.luau
 	Loads the shared modules straight from src/ with Roblox datatypes from
 	@lune/roblox, then checks the design rules the game is built around.
 ]]
