@@ -111,7 +111,8 @@ end
 COMMANDS.setlevel = function(player, arg)
 	local n = tonumber(arg)
 	if not n then
-		return tell(player, "Usage: /setlevel 500", ERR)
+		tell(player, "Usage: /setlevel 500", ERR)
+		return
 	end
 	LevelService.SetLevel(player, n)
 	tell(player, "Level set to " .. LevelService.GetLevel(player))
@@ -120,7 +121,8 @@ end
 COMMANDS.addxp = function(player, arg)
 	local n = tonumber(arg)
 	if not n then
-		return tell(player, "Usage: /addxp 10000", ERR)
+		tell(player, "Usage: /addxp 10000", ERR)
+		return
 	end
 	LevelService.AddXP(player, n)
 	tell(player, "Gave " .. math.floor(n) .. " XP")
@@ -129,7 +131,8 @@ end
 COMMANDS.gold = function(player, arg)
 	local n = tonumber(arg)
 	if not n then
-		return tell(player, "Usage: /gold 1000", ERR)
+		tell(player, "Usage: /gold 1000", ERR)
+		return
 	end
 	LevelService.AddGold(player, n)
 	tell(player, "Gave " .. math.floor(n) .. " gold")
@@ -146,7 +149,8 @@ end
 COMMANDS.tp = function(player, arg)
 	local pos, name = findTarget(arg or "")
 	if not pos then
-		return tell(player, "No area, town or dungeon matches '" .. tostring(arg) .. "'", ERR)
+		tell(player, "No area, town or dungeon matches '" .. tostring(arg) .. "'", ERR)
+		return
 	end
 	if teleport(player, pos) then
 		tell(player, "Teleported to " .. name)

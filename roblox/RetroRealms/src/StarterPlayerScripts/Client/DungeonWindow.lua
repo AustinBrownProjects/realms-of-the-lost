@@ -20,7 +20,7 @@ local player = Players.LocalPlayer
 
 local DungeonWindow = {}
 
-local refs = {}
+local refs: { [string]: any } = {}
 local currentId
 
 local function close()

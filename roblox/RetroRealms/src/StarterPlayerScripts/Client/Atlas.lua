@@ -22,7 +22,7 @@ local C = UI.Colors
 
 local Atlas = {}
 
-local refs = {}
+local refs: { [string]: any } = {}
 local isOpen = false
 
 local CELL = 46
