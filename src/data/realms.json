@@ -1,0 +1,296 @@
+{
+  "difficulties": [
+    {
+      "color": "#969696",
+      "name": "Trivial",
+      "warning": "Barely worth your time."
+    },
+    {
+      "color": "#6ed25a",
+      "name": "Easy",
+      "warning": "You should have no trouble here."
+    },
+    {
+      "color": "#f5dc50",
+      "name": "Fair",
+      "warning": "A fair fight. Stay sharp."
+    },
+    {
+      "color": "#ff9632",
+      "name": "Hard",
+      "warning": "Dangerous. Bring friends or come back stronger."
+    },
+    {
+      "color": "#e63c3c",
+      "name": "Deadly",
+      "warning": "Monsters here will crush you in a few hits."
+    },
+    {
+      "color": "#be28a0",
+      "name": "Suicidal",
+      "warning": "Far beyond your level. You will almost certainly die instantly."
+    }
+  ],
+  "maxLevel": 2000,
+  "worlds": [
+    {
+      "biome": "Meadow",
+      "color": "#6aaa48",
+      "description": "Rolling green meadows around the starting village. Two beginner dungeons lie nearby.",
+      "dungeons": [
+        {
+          "description": "Rats have taken over the old cellar under the village.",
+          "id": "MossyCellar",
+          "level": 5,
+          "name": "Mossy Cellar",
+          "secret": false
+        },
+        {
+          "description": "A maze of tunnels where the goblin chieftain hoards stolen gold.",
+          "id": "GoblinWarren",
+          "level": 20,
+          "name": "Goblin Warren",
+          "secret": false
+        }
+      ],
+      "gx": 0,
+      "gz": 0,
+      "id": "EmberbrookVale",
+      "max": 30,
+      "min": 1,
+      "name": "Emberbrook Vale",
+      "order": 1,
+      "towns": [
+        "Emberbrook Village"
+      ]
+    },
+    {
+      "biome": "Plains",
+      "color": "#b2b052",
+      "description": "Wide golden fields with farming towns, roaming wolves and bandit camps.",
+      "dungeons": [
+        {
+          "description": "An ancient burial mound. The old kings do not rest quietly.",
+          "id": "BarrowOfKings",
+          "level": 80,
+          "name": "Barrow of Kings",
+          "secret": false
+        }
+      ],
+      "gx": 1,
+      "gz": 0,
+      "id": "GoldgrassPlains",
+      "max": 120,
+      "min": 20,
+      "name": "Goldgrass Plains",
+      "order": 2,
+      "towns": [
+        "Haymarket",
+        "Millbrook"
+      ]
+    },
+    {
+      "biome": "Forest",
+      "color": "#346e34",
+      "description": "A dense forest. Most of it is manageable, but something ancient sleeps in the deep woods.",
+      "dungeons": [
+        {
+          "description": "A hollow tree the size of a castle, ruled by the Thornmother.",
+          "id": "ThornheartHollow",
+          "level": 160,
+          "name": "Thornheart Hollow",
+          "secret": false
+        },
+        {
+          "description": "Hidden deep in the Wilds. The Eldest Root is older than the world itself.",
+          "id": "ElderRootSanctum",
+          "level": 700,
+          "name": "Elder Root Sanctum",
+          "secret": true
+        }
+      ],
+      "gx": 0,
+      "gz": 1,
+      "id": "WhisperingWilds",
+      "max": 220,
+      "min": 90,
+      "name": "Whispering Wilds",
+      "order": 3,
+      "towns": [
+        "Thornwick"
+      ]
+    },
+    {
+      "biome": "Desert",
+      "color": "#e2c47a",
+      "description": "Blistering dunes, scorpions and the buried tomb of a forgotten pharaoh.",
+      "dungeons": [
+        {
+          "description": "Traps, mummies and a pharaoh who refuses to stay dead.",
+          "id": "TombOfThePharaoh",
+          "level": 300,
+          "name": "Tomb of the Sand Pharaoh",
+          "secret": false
+        }
+      ],
+      "gx": 2,
+      "gz": 0,
+      "id": "SunscorchDesert",
+      "max": 350,
+      "min": 180,
+      "name": "Sunscorch Desert",
+      "order": 4,
+      "towns": [
+        "Oasis Sahra",
+        "Dunerest"
+      ]
+    },
+    {
+      "biome": "Swamp",
+      "color": "#58603c",
+      "description": "A misty marsh. Easier than the desert, if you don't mind the smell.",
+      "dungeons": [
+        {
+          "description": "A sunken chapel where the drowned still hold mass.",
+          "id": "DrownedChapel",
+          "level": 220,
+          "name": "Drowned Chapel",
+          "secret": false
+        }
+      ],
+      "gx": 1,
+      "gz": 1,
+      "id": "SaltmireSwamp",
+      "max": 280,
+      "min": 150,
+      "name": "Saltmire Swamp",
+      "order": 5,
+      "towns": [
+        "Stilthaven"
+      ]
+    },
+    {
+      "biome": "Snow",
+      "color": "#ecf1fa",
+      "description": "Frozen wastes where wolves hunt in packs and golems of ice guard a sealed vault.",
+      "dungeons": [
+        {
+          "description": "A vault carved into a glacier, sealed for a thousand years.",
+          "id": "GlacierVault",
+          "level": 450,
+          "name": "Glacier Vault",
+          "secret": false
+        }
+      ],
+      "gx": 0,
+      "gz": 2,
+      "id": "FrostfangTundra",
+      "max": 550,
+      "min": 300,
+      "name": "Frostfang Tundra",
+      "order": 6,
+      "towns": [
+        "Icehold",
+        "Frostmere"
+      ]
+    },
+    {
+      "biome": "Coast",
+      "color": "#c4ba96",
+      "description": "Wind-lashed cliffs and beaches. Harpies circle above the leviathan's grotto.",
+      "dungeons": [
+        {
+          "description": "A sea cave where something enormous is nesting.",
+          "id": "LeviathansGrotto",
+          "level": 550,
+          "name": "Leviathan's Grotto",
+          "secret": false
+        }
+      ],
+      "gx": 1,
+      "gz": 2,
+      "id": "StormbreakCoast",
+      "max": 650,
+      "min": 400,
+      "name": "Stormbreak Coast",
+      "order": 7,
+      "towns": [
+        "Port Gale",
+        "Saltcliff"
+      ]
+    },
+    {
+      "biome": "Volcanic",
+      "color": "#3a3030",
+      "description": "A volcanic crater full of lava rivers. Harder than the Crystal Hollows beyond it.",
+      "dungeons": [
+        {
+          "description": "The forge where the Tyrant hammers out weapons for an army of fire.",
+          "id": "MoltenForge",
+          "level": 950,
+          "name": "Molten Forge",
+          "secret": false
+        }
+      ],
+      "gx": 2,
+      "gz": 1,
+      "id": "AshenCaldera",
+      "max": 1000,
+      "min": 650,
+      "name": "Ashen Caldera",
+      "order": 8,
+      "towns": [
+        "Cinderkeep"
+      ]
+    },
+    {
+      "biome": "Crystal",
+      "color": "#4e5884",
+      "description": "Glittering caverns open to the sky, home to golems of living crystal.",
+      "dungeons": [
+        {
+          "description": "Halls of mirrored crystal guarded by the Prism Warden.",
+          "id": "PrismLabyrinth",
+          "level": 800,
+          "name": "Prism Labyrinth",
+          "secret": false
+        }
+      ],
+      "gx": 2,
+      "gz": 2,
+      "id": "CrystalHollows",
+      "max": 900,
+      "min": 600,
+      "name": "Crystal Hollows",
+      "order": 9,
+      "towns": [
+        "Glimmerdeep",
+        "Shardrest"
+      ]
+    },
+    {
+      "biome": "Celestial",
+      "color": "#ded8ee",
+      "description": "Ruins at the edge of the sky. The Fallen Star waits on its throne.",
+      "dungeons": [
+        {
+          "description": "The final throne. Clear it and every corner of the world is yours.",
+          "id": "ThroneOfTheFallenStar",
+          "level": 1200,
+          "name": "Throne of the Fallen Star",
+          "secret": false
+        }
+      ],
+      "gx": 1,
+      "gz": 3,
+      "id": "CelestialReach",
+      "max": 1300,
+      "min": 1000,
+      "name": "Celestial Reach",
+      "order": 10,
+      "towns": [
+        "Skyhaven"
+      ]
+    }
+  ]
+}
