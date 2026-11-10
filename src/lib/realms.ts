@@ -38,7 +38,8 @@ export const DIFFICULTIES: Difficulty[] = data.difficulties as Difficulty[];
 /** Same formula as Progression.GetDifficulty in the game. */
 export function getDifficulty(targetLevel: number, playerLevel: number): Difficulty {
   const ratio = (targetLevel + 10) / (Math.max(1, playerLevel) + 10);
-  return DIFFICULTIES.find((d) => ratio <= d.maxRatio) ?? DIFFICULTIES[DIFFICULTIES.length - 1];
+  const fallback = DIFFICULTIES[DIFFICULTIES.length - 1] as Difficulty;
+  return DIFFICULTIES.find((d) => ratio <= d.maxRatio) ?? fallback;
 }
 
 export const ALL_DUNGEONS = WORLDS.flatMap((w) => w.dungeons);
