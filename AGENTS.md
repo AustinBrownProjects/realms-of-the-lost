@@ -28,3 +28,11 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- The real product is the Roblox game in `roblox/RetroRealms` (Luau, Rojo layout); the web app is only a companion download page. Why: the user builds in Roblox Studio.
+- Game tuning lives in `ReplicatedStorage/Shared` modules (GameConfig, Worlds, Dungeons, Monsters, Progression); services read from them instead of hardcoding numbers. Why: one place to rebalance.
+- Nothing is level-gated in code; difficulty comes only from Progression maths and the shown ratings. Why: core design rule.
+- After changing game scripts, rebuild the place with `rojo build` + `lune run tools/bake.luau` (bakes the greybox map into Workspace), re-run `lune run tests/rules.luau`, re-export `src/data/realms.json`, and refresh `public/downloads`. Why: downloads must match source.
+- The bake harness overrides Lune's `CFrame.lookAt` (Lune 0.10 returns a mirrored rotation). Why: otherwise baked roads/doors face the wrong way.
