@@ -137,14 +137,17 @@ function Index() {
                   className="pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 text-center"
                   style={tilePos(w.gx, w.gz)}
                 >
-                  <span className="block whitespace-nowrap bg-background/80 px-1.5 py-0.5 font-pixel text-[8px] text-foreground sm:text-[9px]">
-                    {w.order}. {w.name}
+                  <span
+                    title={w.name}
+                    className="flex h-7 w-7 items-center justify-center border-2 border-primary bg-background/85 font-pixel text-[10px] text-primary"
+                  >
+                    {w.order}
                   </span>
                 </div>
               ))}
             </div>
             <figcaption className="mt-2 px-1 text-lg text-muted-foreground">
-              Gold squares are towns. Glowing squares are dungeon doors.
+              Numbers match the realms below. Gold squares are towns, glowing squares are dungeon doors.
             </figcaption>
           </figure>
         </section>
