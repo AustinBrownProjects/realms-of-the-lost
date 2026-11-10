@@ -9,8 +9,9 @@ describe("Retro Realms world data", () => {
   });
 
   it("starts in a village area with two dungeons", () => {
-    expect(WORLDS[0].towns).toContain("Emberbrook Village");
-    expect(WORLDS[0].dungeons).toHaveLength(2);
+    const start = WORLDS[0];
+    expect(start?.towns).toContain("Emberbrook Village");
+    expect(start?.dungeons).toHaveLength(2);
   });
 
   it("caps levels at 2000 with the hardest dungeon at 1200", () => {
