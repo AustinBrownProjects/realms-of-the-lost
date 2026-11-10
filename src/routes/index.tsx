@@ -33,10 +33,11 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// Map image covers world x -550..2550 and z -550..3550 (1000-stud tiles)
+// Map image covers world x -550..2550 and z -550..3550 (1000-stud tiles).
+// Badges sit near each tile's top-left corner so they don't cover the towns.
 const tilePos = (gx: number, gz: number) => ({
-  left: `${((gx * 1000 + 550) / 3100) * 100}%`,
-  top: `${((gz * 1000 + 550) / 4100) * 100}%`,
+  left: `${((gx * 1000 - 380 + 550) / 3100) * 100}%`,
+  top: `${((gz * 1000 - 380 + 550) / 4100) * 100}%`,
 });
 
 function PixelButton({
